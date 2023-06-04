@@ -6,11 +6,6 @@ var textedArea = $("#textArea");
 
 
 
-
-
-
-
-
 // dayjs for our current 
 function displayTime() {
   var time = dayjs().format('hh:mm:ss');
@@ -19,23 +14,23 @@ function displayTime() {
 //dayJs for our current Date
 displayTime()
 
+
 function displayDate() {
   var date = dayjs().format('dddd, MMM DD, YYYY');
   timeDisplay.text(date);
 }
-
 displayDate()
+
 
 //Gets item from local storage 8am to save on refresh
 function schduleFromStorage8() {
   var hour8 = localStorage.getItem('8');
   if (hour8) {
     $('#8 .description').val(hour8)
-    
+
   }
 
 }
-
 schduleFromStorage8();
 
 
@@ -44,58 +39,58 @@ function schduleFromStorage9() {
   var hour9 = localStorage.getItem('9');
   if (hour9) {
     $('#9 .description').val(hour9)
-    
+
   }
 
 }
-//Gets item from local storage 10am to save on refresh
 schduleFromStorage9();
 
+
+//Gets item from local storage 10am to save on refresh
 function schduleFromStorage10() {
   var hour10 = localStorage.getItem('10');
   if (hour10) {
     $('#10 .description').val(hour10)
-    
+
   }
 
 }
-
 schduleFromStorage10();
+
 
 ////Gets item from local storage 11am to save on refresh
 function schduleFromStorage11() {
   var hour11 = localStorage.getItem('11');
   if (hour11) {
     $('#11 .description').val(hour11)
-    
+
   }
 
 }
-
 schduleFromStorage11();
+
 
 ////Gets item from local storage 12pm to save on refresh
 function schduleFromStorage12() {
   var hour12 = localStorage.getItem('12');
   if (hour12) {
     $('#12 .description').val(hour12)
-    
+
   }
 
 }
-
 schduleFromStorage12();
+
 
 //Gets item from local storage 1pm to save on refresh
 function schduleFromStorage1() {
   var hour1 = localStorage.getItem('1');
   if (hour1) {
     $('#1 .description').val(hour1)
-    
+
   }
 
 }
-
 schduleFromStorage1();
 
 
@@ -104,48 +99,48 @@ function schduleFromStorage2() {
   var hour2 = localStorage.getItem('2');
   if (hour2) {
     $('#2 .description').val(hour2)
-    
+
   }
 
 }
-
 schduleFromStorage2();
+
 
 //Gets item from local storage 3pm to save on refresh
 function schduleFromStorage3() {
   var hour3 = localStorage.getItem('3');
   if (hour3) {
     $('#3 .description').val(hour3)
-    
+
   }
 
 }
-
 schduleFromStorage3();
+
 
 //Gets item from local storage 4pm to save on refresh
 function schduleFromStorage4() {
   var hour4 = localStorage.getItem('4');
   if (hour4) {
     $('#4 .description').val(hour4)
-    
+
   }
 
 }
-
 schduleFromStorage4();
+
 
 //Gets item from local storage 5pm to save on refresh
 function schduleFromStorage5() {
   var hour5 = localStorage.getItem('5');
   if (hour5) {
     $('#5 .description').val(hour5)
-    
+
   }
 
 }
-
 schduleFromStorage5();
+
 
 // Click even for all save buttons on page.
 saveBtn.on('click', function (event) {
