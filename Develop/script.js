@@ -1,6 +1,6 @@
 // query selectors for save button
 var timeDisplay = $('#currentDay');
-var saveBtn = $("saveBtn");
+var saveBtn = $(".saveBtn");
 var textedArea = $("#textArea");
 
 
@@ -13,40 +13,51 @@ var textedArea = $("#textArea");
 
 // dayjs for our current time and date
 function displayTime() {
-var time = dayjs().format('hh:mm:ss');
-$('#currentTime').text(time);
+  var time = dayjs().format('hh:mm:ss');
+  $('#currentTime').text(time);
 }
 
 displayTime()
 
 function displayDate() {
-var date = dayjs().format('dddd, MMM DD, YYYY');
-$('#currentDay').text(date)
+  var date = dayjs().format('dddd, MMM DD, YYYY');
+  $('#currentDay').text(date)
 }
 
 displayDate()
 
 function schduleFromStorage() {
-console.log("what is going on here")
-var schedule = localStorage.getItem('schedule');
-if (schedule) {
-  schedule = JSON.parse(schedule);
-  return schedule;
-}
+  console.log("what is going on here")
+  var schedule = localStorage.getItem('schedule');
+  if (schedule) {
+    schedule = JSON.parse(schedule);
+    return schedule;
+  }
 
 }
 
+function schduleFromStorage() {
+  console.log("what is going on here")
+  var hour9 = localStorage.getItem('9');
+  if (hour9) {
+    $('#9')
+    return schedule;
+  }
 
+}
 
 
 
 
 saveBtn.on('click', function (event) {
   //console.log("save your schdule", event.target)
-  console.log("save your schedule", $(this))
+  // console.log("save your schedule", $(this))
   //$('col-8 col-md-10 description').siblings(event)
-  $(this).siblings(".description")
-  localStorage.setItem('schedule', JSON.stringify(event));
+  var textDescription = $(this).siblings(".description").val()
+  console.log(textDescription);
+  var timeBlock = $(this).parent().attr("id")
+  console.log(timeBlock);
+  localStorage.setItem(timeBlock, textDescription);
 });
 
 
