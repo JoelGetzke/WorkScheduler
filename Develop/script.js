@@ -1,6 +1,71 @@
+// query selectors for save button
+var timeDisplay = $('#currentDay');
+var saveBtn = $("saveBtn");
+var textedArea = $("#textArea");
+
+
+
+
+
+
+
+
+
+// dayjs for our current time and date
+function displayTime() {
+var time = dayjs().format('hh:mm:ss');
+$('#currentTime').text(time);
+}
+
+displayTime()
+
+function displayDate() {
+var date = dayjs().format('dddd, MMM DD, YYYY');
+$('#currentDay').text(date)
+}
+
+displayDate()
+
+function schduleFromStorage() {
+console.log("what is going on here")
+var schedule = localStorage.getItem('schedule');
+if (schedule) {
+  schedule = JSON.parse(schedule);
+  return schedule;
+}
+
+}
+
+
+
+
+
+
+saveBtn.on('click', function (event) {
+  //console.log("save your schdule", event.target)
+  console.log("save your schedule", $(this))
+  //$('col-8 col-md-10 description').siblings(event)
+  $(this).siblings(".description")
+  localStorage.setItem('schedule', JSON.stringify(event));
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
 $(function () {
 
 })
