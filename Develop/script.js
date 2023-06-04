@@ -1,4 +1,4 @@
-// query selectors for save button
+// query selectors for save button, timedisplay, textArea
 var timeDisplay = $('#currentDay');
 var saveBtn = $(".saveBtn");
 var textedArea = $("#textArea");
@@ -11,12 +11,12 @@ var textedArea = $("#textArea");
 
 
 
-// dayjs for our current time and date
+// dayjs for our current 
 function displayTime() {
   var time = dayjs().format('hh:mm:ss');
   $('#currentTime').text(time);
 }
-
+//dayJs for our current Date
 displayTime()
 
 function displayDate() {
@@ -26,6 +26,7 @@ function displayDate() {
 
 displayDate()
 
+//Gets item from local storage 8am to save on refresh
 function schduleFromStorage8() {
   var hour8 = localStorage.getItem('8');
   if (hour8) {
@@ -38,7 +39,7 @@ function schduleFromStorage8() {
 schduleFromStorage8();
 
 
-
+//Gets item from local storage 9am to save on refresh
 function schduleFromStorage9() {
   var hour9 = localStorage.getItem('9');
   if (hour9) {
@@ -47,7 +48,7 @@ function schduleFromStorage9() {
   }
 
 }
-
+//Gets item from local storage 10am to save on refresh
 schduleFromStorage9();
 
 function schduleFromStorage10() {
@@ -61,6 +62,7 @@ function schduleFromStorage10() {
 
 schduleFromStorage10();
 
+////Gets item from local storage 11am to save on refresh
 function schduleFromStorage11() {
   var hour11 = localStorage.getItem('11');
   if (hour11) {
@@ -72,6 +74,7 @@ function schduleFromStorage11() {
 
 schduleFromStorage11();
 
+////Gets item from local storage 12pm to save on refresh
 function schduleFromStorage12() {
   var hour12 = localStorage.getItem('12');
   if (hour12) {
@@ -83,6 +86,7 @@ function schduleFromStorage12() {
 
 schduleFromStorage12();
 
+//Gets item from local storage 1pm to save on refresh
 function schduleFromStorage1() {
   var hour1 = localStorage.getItem('1');
   if (hour1) {
@@ -95,6 +99,7 @@ function schduleFromStorage1() {
 schduleFromStorage1();
 
 
+//Gets item from local storage 2pm to save on refresh
 function schduleFromStorage2() {
   var hour2 = localStorage.getItem('2');
   if (hour2) {
@@ -106,6 +111,7 @@ function schduleFromStorage2() {
 
 schduleFromStorage2();
 
+//Gets item from local storage 3pm to save on refresh
 function schduleFromStorage3() {
   var hour3 = localStorage.getItem('3');
   if (hour3) {
@@ -117,6 +123,7 @@ function schduleFromStorage3() {
 
 schduleFromStorage3();
 
+//Gets item from local storage 4pm to save on refresh
 function schduleFromStorage4() {
   var hour4 = localStorage.getItem('4');
   if (hour4) {
@@ -128,6 +135,7 @@ function schduleFromStorage4() {
 
 schduleFromStorage4();
 
+//Gets item from local storage 5pm to save on refresh
 function schduleFromStorage5() {
   var hour5 = localStorage.getItem('5');
   if (hour5) {
@@ -139,6 +147,7 @@ function schduleFromStorage5() {
 
 schduleFromStorage5();
 
+// Click even for all save buttons on page.
 saveBtn.on('click', function (event) {
   //console.log("save your schdule", event.target)
   // console.log("save your schedule", $(this))
