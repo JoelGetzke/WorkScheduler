@@ -21,33 +21,123 @@ displayTime()
 
 function displayDate() {
   var date = dayjs().format('dddd, MMM DD, YYYY');
-  $('#currentDay').text(date)
+  timeDisplay.text(date);
 }
 
 displayDate()
 
-function schduleFromStorage() {
-  console.log("what is going on here")
-  var schedule = localStorage.getItem('schedule');
-  if (schedule) {
-    schedule = JSON.parse(schedule);
-    return schedule;
+function schduleFromStorage8() {
+  var hour8 = localStorage.getItem('8');
+  if (hour8) {
+    $('#8 .description').val(hour8)
+    
   }
 
 }
 
-function schduleFromStorage() {
-  console.log("what is going on here")
+schduleFromStorage8();
+
+
+
+function schduleFromStorage9() {
   var hour9 = localStorage.getItem('9');
   if (hour9) {
-    $('#9')
-    return schedule;
+    $('#9 .description').val(hour9)
+    
   }
 
 }
 
+schduleFromStorage9();
+
+function schduleFromStorage10() {
+  var hour10 = localStorage.getItem('10');
+  if (hour10) {
+    $('#10 .description').val(hour10)
+    
+  }
+
+}
+
+schduleFromStorage10();
+
+function schduleFromStorage11() {
+  var hour11 = localStorage.getItem('11');
+  if (hour11) {
+    $('#11 .description').val(hour11)
+    
+  }
+
+}
+
+schduleFromStorage11();
+
+function schduleFromStorage12() {
+  var hour12 = localStorage.getItem('12');
+  if (hour12) {
+    $('#12 .description').val(hour12)
+    
+  }
+
+}
+
+schduleFromStorage12();
+
+function schduleFromStorage1() {
+  var hour1 = localStorage.getItem('1');
+  if (hour1) {
+    $('#1 .description').val(hour1)
+    
+  }
+
+}
+
+schduleFromStorage1();
 
 
+function schduleFromStorage2() {
+  var hour2 = localStorage.getItem('2');
+  if (hour2) {
+    $('#2 .description').val(hour2)
+    
+  }
+
+}
+
+schduleFromStorage2();
+
+function schduleFromStorage3() {
+  var hour3 = localStorage.getItem('3');
+  if (hour3) {
+    $('#3 .description').val(hour3)
+    
+  }
+
+}
+
+schduleFromStorage3();
+
+function schduleFromStorage4() {
+  var hour4 = localStorage.getItem('4');
+  if (hour4) {
+    $('#4 .description').val(hour4)
+    
+  }
+
+}
+
+schduleFromStorage4();
+
+function schduleFromStorage5() {
+  var hour5 = localStorage.getItem('5');
+  if (hour5) {
+    $('#5 .description').val(hour5)
+    
+  }
+
+}
+
+schduleFromStorage5();
 
 saveBtn.on('click', function (event) {
   //console.log("save your schdule", event.target)
