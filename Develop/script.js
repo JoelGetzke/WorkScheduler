@@ -2,6 +2,8 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 $(function () {
+
+})
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -20,59 +22,6 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
-});
-
-
-var practice = $('#root');
-
-var title = $('<h1>');
-
-title.text('Hello friends');
-
-title.atr('class','fancy')
-
-title.addClass
-
-qote.text('dfdafdsaf')
-
-title.atr('class', 'fancy')
-
-var element = $('<h1>');
-
-element.text('hello')
-
-
-function getAPI() {
-
-  var getWebsite = www.api.com
-
-  fetch(getWebsite) 
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data){
-    console.log(data)
-
-    for (var i = 0; i < data.length; i++;) {
-
-      var createTableRow = document.createElement('tr');
-      var tableData = document.createElement('td')
-      var link = document.createElement('a');
-
-      link.textContent = data[i].html_url;
-      link.href = data[i].html_url;
-
-
-      tableData.appendChild(link);
-      createTableRow.appendChild(tableData);
-      tableBody.appendChild(createTableRow); 
-    }
-
-  })
-
-}
-
-fetchButton.addEventListener('click', getAPI );
 
 
 
