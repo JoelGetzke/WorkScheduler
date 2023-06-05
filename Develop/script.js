@@ -29,7 +29,7 @@ return currentHour
 }
 console.log(getCurrentHour());
 
-//18 < 8
+//18 < 8                   //6:00
 if (getCurrentHour() >= 18) {
   $(".time-block").addClass("past")
 } else if (getCurrentHour() < 8) { 
@@ -37,9 +37,7 @@ if (getCurrentHour() >= 18) {
   
 } else { 
   $(".time-block").addClass("past")
-  // TODO: When more familiar with javascript, will come back to optimize
-  // this for interview practice
-
+ 
   // Equivalent: $("#hour-15") if your computer is at 3pm
   $("#hour-" + getCurrentHour()).removeClass("past").addClass("present")
 
@@ -55,7 +53,7 @@ if (getCurrentHour() >= 18) {
 function schduleFromStorage8() {
   var hour8 = localStorage.getItem('hour-8');
   if (hour8) {
-    $('#8 .description').val(hour8)
+    $('#hour-8 .description').val(hour8)
 
   }
 
@@ -67,7 +65,7 @@ schduleFromStorage8();
 function schduleFromStorage9() {
   var hour9 = localStorage.getItem('hour-9');
   if (hour9) {
-    $('#9 .description').val(hour9)
+    $('#hour-9 .description').val(hour9)
 
   }
 
@@ -79,7 +77,7 @@ schduleFromStorage9();
 function schduleFromStorage10() {
   var hour10 = localStorage.getItem('hour-10');
   if (hour10) {
-    $('#10 .description').val(hour10)
+    $('#hour-10 .description').val(hour10)
 
   }
 
@@ -91,7 +89,7 @@ schduleFromStorage10();
 function schduleFromStorage11() {
   var hour11 = localStorage.getItem('hour-11');
   if (hour11) {
-    $('#11 .description').val(hour11)
+    $('#hour-11 .description').val(hour11)
 
   }
 
@@ -103,7 +101,7 @@ schduleFromStorage11();
 function schduleFromStorage12() {
   var hour12 = localStorage.getItem('hour-12');
   if (hour12) {
-    $('#12 .description').val(hour12)
+    $('#hour-12 .description').val(hour12)
 
   }
 
@@ -112,63 +110,63 @@ schduleFromStorage12();
 
 
 //Gets item from local storage 1pm to save on refresh
-function schduleFromStorage1() {
-  var hour1 = localStorage.getItem('hour-1');
-  if (hour1) {
-    $('#1 .description').val(hour1)
+function schduleFromStorage13() {
+  var hour13 = localStorage.getItem('hour-13');
+  if (hour13) {
+    $('#hour-13 .description').val(hour13)
 
   }
 
 }
-schduleFromStorage1();
+schduleFromStorage13();
 
 
 //Gets item from local storage 2pm to save on refresh
-function schduleFromStorage2() {
-  var hour2 = localStorage.getItem('hour-2');
-  if (hour2) {
-    $('#2 .description').val(hour2)
+function schduleFromStorage14() {
+  var hour14 = localStorage.getItem('hour-14');
+  if (hour14) {
+    $('#hour-14 .description').val(hour14)
 
   }
 
 }
-schduleFromStorage2();
+schduleFromStorage14();
 
 
 //Gets item from local storage 3pm to save on refresh
-function schduleFromStorage3() {
-  var hour3 = localStorage.getItem('hour-3');
-  if (hour3) {
-    $('#3 .description').val(hour3)
+function schduleFromStorage15() {
+  var hour15 = localStorage.getItem('hour-15');
+  if (hour15) {
+    $('#hour-15 .description').val(hour15)
 
   }
 
 }
-schduleFromStorage3();
+schduleFromStorage15();
 
 
 //Gets item from local storage 4pm to save on refresh
-function schduleFromStorage4() {
-  var hour4 = localStorage.getItem('hour-4');
-  if (hour4) {
-    $('#4 .description').val(hour4)
+function schduleFromStorage16() {
+  var hour16 = localStorage.getItem('hour-16');
+  if (hour16) {
+    $('#hour-16 .description').val(hour16)
 
   }
 
 }
-schduleFromStorage4();
+schduleFromStorage16();
 
 
 //Gets item from local storage 5pm to save on refresh
-function schduleFromStorage5() {
-  var hour5 = localStorage.getItem('hour-5');
-  if (hour5) {
-    $('#5 .description').val(hour5)
+function schduleFromStorage17() {
+  var hour17 = localStorage.getItem('hour-17');
+  if (hour17) {
+    $('#hour-17 .description').val(hour17)
 
   }
 
 }
-schduleFromStorage5();
+schduleFromStorage17();
 
 
 
@@ -181,9 +179,7 @@ schduleFromStorage5();
 
 // Click even for all save buttons on page.
 saveBtn.on('click', function (event) {
-  //console.log("save your schdule", event.target)
-  // console.log("save your schedule", $(this))
-  //$('col-8 col-md-10 description').siblings(event)
+ 
   var textDescription = $(this).siblings(".description").val()
   console.log(textDescription);
   var timeBlock = $(this).parent().attr("id")
