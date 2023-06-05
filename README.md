@@ -18,7 +18,7 @@ Through this project I learned:
 N/A
 
 ## Usage
-To view this webpage copy and paste this link in a web browser: https://glansburg.github.io/JoelPortfolio/
+To view this webpage copy and paste this link in a web browser: https://glansburg.github.io/WorkScheduler/
 
 
 
