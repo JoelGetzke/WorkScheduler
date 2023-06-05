@@ -21,10 +21,39 @@ function displayDate() {
 }
 displayDate()
 
+function getCurrentHour() {
+var currentDate = new Date()
+var currentHour = currentDate.getHours();
+return currentHour
+
+}
+console.log(getCurrentHour());
+
+//18 < 8
+if (getCurrentHour() >= 18) {
+  $(".time-block").addClass("past")
+} else if (getCurrentHour() < 8) { 
+  $(".time-block").addClass("past")
+  
+} else { 
+  $(".time-block").addClass("past")
+  // TODO: When more familiar with javascript, will come back to optimize
+  // this for interview practice
+
+  // Equivalent: $("#hour-15") if your computer is at 3pm
+  $("#hour-" + getCurrentHour()).removeClass("past").addClass("present")
+
+  for( i = (getCurrentHour() + 1) ; i <= 17; i++) {
+    // i = 16 / 4pm
+    $("#hour-" + i).removeClass("past").addClass("future")
+  }
+}
+
+
 
 //Gets item from local storage 8am to save on refresh
 function schduleFromStorage8() {
-  var hour8 = localStorage.getItem('8');
+  var hour8 = localStorage.getItem('hour-8');
   if (hour8) {
     $('#8 .description').val(hour8)
 
@@ -36,7 +65,7 @@ schduleFromStorage8();
 
 //Gets item from local storage 9am to save on refresh
 function schduleFromStorage9() {
-  var hour9 = localStorage.getItem('9');
+  var hour9 = localStorage.getItem('hour-9');
   if (hour9) {
     $('#9 .description').val(hour9)
 
@@ -48,7 +77,7 @@ schduleFromStorage9();
 
 //Gets item from local storage 10am to save on refresh
 function schduleFromStorage10() {
-  var hour10 = localStorage.getItem('10');
+  var hour10 = localStorage.getItem('hour-10');
   if (hour10) {
     $('#10 .description').val(hour10)
 
@@ -60,7 +89,7 @@ schduleFromStorage10();
 
 ////Gets item from local storage 11am to save on refresh
 function schduleFromStorage11() {
-  var hour11 = localStorage.getItem('11');
+  var hour11 = localStorage.getItem('hour-11');
   if (hour11) {
     $('#11 .description').val(hour11)
 
@@ -72,7 +101,7 @@ schduleFromStorage11();
 
 ////Gets item from local storage 12pm to save on refresh
 function schduleFromStorage12() {
-  var hour12 = localStorage.getItem('12');
+  var hour12 = localStorage.getItem('hour-12');
   if (hour12) {
     $('#12 .description').val(hour12)
 
@@ -84,7 +113,7 @@ schduleFromStorage12();
 
 //Gets item from local storage 1pm to save on refresh
 function schduleFromStorage1() {
-  var hour1 = localStorage.getItem('1');
+  var hour1 = localStorage.getItem('hour-1');
   if (hour1) {
     $('#1 .description').val(hour1)
 
@@ -96,7 +125,7 @@ schduleFromStorage1();
 
 //Gets item from local storage 2pm to save on refresh
 function schduleFromStorage2() {
-  var hour2 = localStorage.getItem('2');
+  var hour2 = localStorage.getItem('hour-2');
   if (hour2) {
     $('#2 .description').val(hour2)
 
@@ -108,7 +137,7 @@ schduleFromStorage2();
 
 //Gets item from local storage 3pm to save on refresh
 function schduleFromStorage3() {
-  var hour3 = localStorage.getItem('3');
+  var hour3 = localStorage.getItem('hour-3');
   if (hour3) {
     $('#3 .description').val(hour3)
 
@@ -120,7 +149,7 @@ schduleFromStorage3();
 
 //Gets item from local storage 4pm to save on refresh
 function schduleFromStorage4() {
-  var hour4 = localStorage.getItem('4');
+  var hour4 = localStorage.getItem('hour-4');
   if (hour4) {
     $('#4 .description').val(hour4)
 
@@ -132,7 +161,7 @@ schduleFromStorage4();
 
 //Gets item from local storage 5pm to save on refresh
 function schduleFromStorage5() {
-  var hour5 = localStorage.getItem('5');
+  var hour5 = localStorage.getItem('hour-5');
   if (hour5) {
     $('#5 .description').val(hour5)
 
@@ -140,6 +169,14 @@ function schduleFromStorage5() {
 
 }
 schduleFromStorage5();
+
+
+
+
+
+
+
+
 
 
 // Click even for all save buttons on page.
