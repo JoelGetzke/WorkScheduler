@@ -17,7 +17,7 @@ Through this project I learned:
 N/A
 
 ## Usage
-To view this webpage copy and paste this link in a web browser: https://glansburg.github.io/WorkScheduler/
+To view this webpage copy and paste this link in a web browser: https://joelgetzke.github.io/WorkScheduler/
 
 
 <img width="1051" alt="workscheduler" src="https://github.com/Glansburg/WorkScheduler/assets/117139285/2b9860b2-3748-4089-a854-b412b198c799">
