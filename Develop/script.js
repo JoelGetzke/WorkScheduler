@@ -29,7 +29,7 @@ return currentHour
 }
 console.log(getCurrentHour());
 
-//18 < 8                   //6:00
+// if statement to change color of time block based on time of day  past, present, future 
 if (getCurrentHour() >= 18) {
   $(".time-block").addClass("past")
 } else if (getCurrentHour() < 8) { 
