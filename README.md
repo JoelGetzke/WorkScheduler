@@ -11,7 +11,6 @@ Through this project I learned:
 * That with time and practice I could become a good coder.
   
 ## Being new to web development I came across some issues you may see obvious such as:
-* Doing 100% of code on my own. I seeked out help from instructor, tutuor.
 * Knowing where to start but i finished!
 * getting used to technical concepts on logic
  ## Instalation
